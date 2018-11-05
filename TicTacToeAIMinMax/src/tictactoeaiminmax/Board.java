@@ -71,14 +71,14 @@ public class Board {
             return 1;
         
         if(hasPlayerWon(PLAYER_O))
-            return 0;
+            return -1;
         
         List<Point> availableCells=getAvailableCells();
         if(availableCells.isEmpty())
             return 0;
         
-        int min=Integer.MIN_VALUE;
-        int max=Integer.MAX_VALUE;
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
         
         for(int i=0;i<availableCells.size();i++){
             Point point=availableCells.get(i);
